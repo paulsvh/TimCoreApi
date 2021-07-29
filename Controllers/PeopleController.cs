@@ -20,6 +20,19 @@ namespace TimCoreApi.Controllers
 
         }
 
+        [Route("api/People/GetFirstNames")]
+        [HttpGet]
+
+        public List<string> GetFirstNames()
+        {
+            List<string> output = new List<string>();
+            foreach (var p in people)
+            {
+                output.Add(p.FirstName);
+            }
+            return output;
+        }
+
         // GET: api/People
         public List<Person> Get()
         {
