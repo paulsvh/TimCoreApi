@@ -27,9 +27,9 @@ namespace TimCoreApi.Controllers
         }
 
         // GET: api/People/5
-        public string Get(int id)
+        public Person Get(int id)
         {
-            return "value";
+            return people.Where(x => x.Id == id).FirstOrDefault();
         }
 
         // POST: api/People
