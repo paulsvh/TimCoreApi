@@ -20,10 +20,10 @@ namespace TimCoreApi.Controllers
 
         }
 
-        [Route("api/People/GetFirstNames")]
+        [Route("api/People/GetFirstNames/{userId:int}/{age:int}")]
         [HttpGet]
 
-        public List<string> GetFirstNames()
+        public List<string> GetFirstNames(int userId, int age)
         {
             List<string> output = new List<string>();
             foreach (var p in people)
