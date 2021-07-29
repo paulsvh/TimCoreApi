@@ -33,8 +33,9 @@ namespace TimCoreApi.Controllers
         }
 
         // POST: api/People
-        public void Post([FromBody]string value)
+        public void Post(Person val)
         {
+            people.Add(val);
         }
 
         // DELETE: api/People/5
