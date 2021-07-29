@@ -8,6 +8,9 @@ using TimCoreApi.Models;
 
 namespace TimCoreApi.Controllers
 {
+    /// <summary>
+    /// This is where all people information is accessed and maintained
+    /// </summary>
     public class PeopleController : ApiController
     {
         List<Person> people = new List<Person>();
@@ -20,9 +23,14 @@ namespace TimCoreApi.Controllers
 
         }
 
+        /// <summary>
+        /// Gets a list of the first names of all users
+        /// </summary>
+        /// <param name="userId">The unique identifier for this person instance</param>
+        /// <param name="age">We want to know how old they are</param>
+        /// <returns>A list of first names</returns>
         [Route("api/People/GetFirstNames/{userId:int}/{age:int}")]
         [HttpGet]
-
         public List<string> GetFirstNames(int userId, int age)
         {
             List<string> output = new List<string>();
